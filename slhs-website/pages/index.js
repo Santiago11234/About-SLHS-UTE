@@ -280,8 +280,9 @@ export default function Home() {
 
   if (!Recharts) {
     return null; // or a loading spinner
+    console.log("deployment works")
   }
-
+   
   return (
     <div className="bg-red-500 text-white relative">
       <BarNav />
