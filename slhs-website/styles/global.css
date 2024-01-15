@@ -1,0 +1,186 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+body {
+  padding: 0;
+  margin: 0;
+ 
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* Adjust the value to match your navbar's height */
+}
+
+
+
+
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+ }
+ 
+ .slideDown {
+  animation: slideDown 3s ease-out forwards;
+ }
+
+
+
+
+ .container-timeline {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  
+  
+
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+.timeline ul {
+  list-style: none;
+  
+}
+.timeline ul li {
+  color: rgb(255, 255, 255);
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+  
+}
+
+.timeline-css{
+  background-image: linear-gradient(135deg, rgb(220 38 38) 50%, #FFFFFF 100%);
+  /* background-color: rgb(220 38 38); */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation-name: fadeInDown;
+  animation-duration: 2s;
+}
+
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 5px;
+  
+}
+
+.timeline-content h2 {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 15px;
+  margin-bottom: 10px;
+  padding: 5;
+  color: #dddddd;
+  text-align: center;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #ffffff;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: #FF0000;
+  }
+  @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+  } 
+
+}

@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "autoprefixer": "^10.4.16",
+    "next": "latest",
+    "postcss": "^8.4.33",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recharts": "^2.10.4",
+    "tailwindcss": "^3.4.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3"
+  }
+}
