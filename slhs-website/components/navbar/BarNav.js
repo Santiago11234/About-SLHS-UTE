@@ -28,7 +28,7 @@ export default function NavBar() {
           Courses
         </StyledLink>
  
-        <StyledLink href="/documentation" className="text-white font-bold text-xl hover:underline">
+        <StyledLink href="#documentation" className="text-white font-bold text-xl hover:underline">
           Documentation
         </StyledLink>
       </div>
